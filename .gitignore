@@ -1,0 +1,21 @@
+# Contraseñas y configuración privada
+.env
+.env.*
+includes/config.local.php
+
+# Copias de la base de datos (pueden tener datos de estudiantes)
+database/respaldos/
+database/*.backup.sql
+database/*.dump
+
+# Registros y archivos temporales
+*.log
+*.tmp
+*.bak
+
+# Archivos de Windows, macOS y editores
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

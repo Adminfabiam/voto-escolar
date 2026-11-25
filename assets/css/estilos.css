@@ -1,0 +1,111 @@
+/* Estilos del Sistema de Voto Escolar - Rangers educations */
+
+:root {
+    --color-principal: #1d4ed8;
+    --color-principal-oscuro: #1e3a8a;
+    --color-fondo: #eef2f7;
+    --color-tarjeta: #ffffff;
+    --color-texto: #1f2937;
+    --color-texto-suave: #4b5563;
+    --color-borde: #6b7280;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh; /* Se ajusta a las barras del navegador en celulares */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.5;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 26rem;
+    padding: clamp(1.25rem, 5vw, 2.5rem);
+    background: var(--color-tarjeta);
+    border-top: 6px solid var(--color-principal);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(1.35rem, 5vw, 1.75rem);
+    line-height: 1.25;
+    color: var(--color-principal-oscuro);
+    margin-bottom: 0.75rem;
+}
+
+.instruccion {
+    color: var(--color-texto-suave);
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+button {
+    width: 100%;
+    min-height: 3rem; /* Tamaño cómodo para tocar con el dedo */
+    border-radius: 8px;
+    font: inherit;
+    font-size: 1rem; /* Evita el zoom automático en iPhone */
+}
+
+input {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-borde);
+}
+
+button {
+    border: none;
+    background: var(--color-principal);
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--color-principal-oscuro);
+}
+
+input:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--color-principal);
+    outline-offset: 2px;
+}
+
+footer {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--color-texto-suave);
+    text-align: center;
+}
+
+/* Pantallas grandes (computadoras, proyectores) */
+@media (min-width: 1200px) {
+    html {
+        font-size: 112.5%;
+    }
+}
